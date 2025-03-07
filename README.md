@@ -1,22 +1,35 @@
 # BISTROT Zinal Chatbot 🏔️
 
-Un chatbot simple pour commander des sandwichs et louer des sacs à dos au BISTROT Zinal.
+Un chatbot optimisé pour commander des sandwichs et louer des sacs à dos au BISTROT Zinal.
 
 ## Fonctionnalités 🌟
 
-- Commande de sandwichs et wraps variés
+### Pour les Clients
+- Commande intuitive de sandwichs et wraps
 - Location de sac à dos avec compartiment isotherme
-- Choix de l'heure de retrait
-- Génération de bons de commande
-- Sauvegarde des commandes au format JSON
+- Choix de l'heure de retrait avec validation intelligente
+- Système de confirmation détaillé
+- Interface utilisateur améliorée avec emojis
+
+### Pour le Restaurant
+- Génération de bons de commande détaillés
+- Suivi des statistiques de vente
+- Gestion des heures de pointe
+- Logging des opérations
+- Sauvegarde sécurisée des données
 
 ## Menu 🥪
 
-- Sandwich Jambon-Fromage (8.50 CHF)
-- Sandwich Poulet-Crudités (9.50 CHF)
-- Wrap Végétarien (8.50 CHF)
-- Wrap au Thon (9.00 CHF)
-- Location Sac à Dos Journée (5.00 CHF)
+### Sandwichs
+- Jambon-Fromage (8.50 CHF)
+- Poulet-Crudités (9.50 CHF)
+
+### Wraps
+- Végétarien (8.50 CHF)
+- Thon (9.00 CHF)
+
+### Location
+- Sac à Dos Journée (5.00 CHF)
 
 ## Installation 🛠️
 
@@ -35,24 +48,40 @@ pip install -r requirements.txt
 
 Lancez le chatbot :
 ```bash
-python hotel_breakfast_chatbot.py
+python bistrot_zinal_chatbot.py
 ```
 
-## Horaires de retrait ⏰
+## Horaires de Service ⏰
 
-- Les commandes peuvent être retirées entre 7h00 et 18h00
-- Prévoir au moins 30 minutes de préparation
+- Heures d'ouverture : 7h00 - 18h00
+- Délai de préparation minimum : 30 minutes
 - Format de l'heure : HH:MM
 
-## Structure des données 📁
+## Structure des Données 📁
 
-Les commandes sont sauvegardées dans le dossier `commandes/` au format JSON avec les informations suivantes :
-- Numéro de commande unique
+### Commandes
+Les commandes sont sauvegardées dans le dossier `commandes/` au format JSON avec :
+- Numéro de commande unique (format: BZYYYYMMDDHHMMSS)
 - Date et heure de la commande
 - Heure de retrait
 - Articles commandés
 - Montant total
+- Informations client
 - Statut de la commande
+
+### Statistiques
+Le système maintient des statistiques sur :
+- Nombre total de commandes
+- Articles les plus populaires
+- Heures de pointe
+- Revenus totaux
+
+## Gestion des Erreurs 🛡️
+
+- Validation des entrées utilisateur
+- Gestion des exceptions
+- Logging des erreurs
+- Messages d'erreur utilisateur conviviaux
 
 ## Contact 📞
 
